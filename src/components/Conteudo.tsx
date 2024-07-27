@@ -1,11 +1,11 @@
-export default function Conteudo() {
+export default function Conteudo(props: any ) {
   return (
     <div className={`
-      flex justify-center items-center flex-1
-      text-3xl rounded-lg
-      bg-emerald-500
+      flex items-start flex-1
+      text-3xl p-4
+      bg-zinc-900
     `}>
-      Conteúdo
+      {props.children}
     </div>
   )
 }

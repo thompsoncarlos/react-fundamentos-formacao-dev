@@ -1,12 +1,17 @@
-export default function Rodape() {
+interface RodapeProps {
+  textoEsquerdo: string
+  textoDireito: string
+}
+
+export default function Rodape(props: RodapeProps) {
   return (
     <div className={`
-      bg-cyan-600 h-36 
-      rounded-lg flex
-      justify-center items-center
-      text-3xl
+      h-16 border-t bg-zinc-900 border-zinc-800 
+      flex justify-between items-center
+      text-base px-10 text-zinc-500
     `}>
-      Rodapé
+       <span> {props.textoEsquerdo}</span>
+        <span>{props.textoDireito}</span>
     </div>
   )
 }

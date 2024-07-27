@@ -1,3 +1,5 @@
+import Pagina from "@/components/Pagina"
+
 export default function Page() {
 
   function renderizarTitulo() {
@@ -20,10 +22,12 @@ export default function Page() {
   }
 
   return (
-    <div>
-      {renderizarTitulo()}
-      <hr />
-      {renderizarConteudo()}
-    </div>
+    <Pagina titulo="Minha Aplicação" subtitulo="Melhor app da Web">
+      <div>
+        {renderizarTitulo()}
+        <hr />
+        {renderizarConteudo()}
+      </div>
+    </Pagina>
   )
 }

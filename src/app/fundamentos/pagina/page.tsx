@@ -1,16 +1,20 @@
 import Cabecalho from "@/components/Cabecalho";
 import Conteudo from "@/components/Conteudo";
 import Rodape from "@/components/Rodape";
+import Menu from "@/components/Menu";
+import Pagina from "@/components/Pagina";
 
 export default function Page() {
+  const ano = new Date().getFullYear()
+
   return (
-    <div className={`
-        flex flex-col gap-4
-        p-4 h-screen
-      `}>
-      <Cabecalho titulo="Minha Aplicação" subtitulo="Melhor app da Web"/>
-      <Conteudo />
-      <Rodape />
-    </div>
-  )  
+    <Pagina titulo="Minha Aplicação" subtitulo="Melhor app da Web">
+      <ul className="list-disc pl-8">
+        <li>Carlos</li>
+        <li>Liana</li>
+        <li>Miguel</li>
+        <li>Matheus</li>
+      </ul>
+    </Pagina>
+  )
 }
